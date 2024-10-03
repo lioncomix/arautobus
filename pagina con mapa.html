@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pagina principal</title>
+	
+<style>
+        /* Contenedor padre */
+        .contenedor-padre {
+            display: flex; /* Usamos flexbox */
+            justify-content: space-between; /* Espaciado entre elementos */
+            align-items: flex-start; /* Alineación superior */
+            gap: 10px; /* Espacio entre los elementos */
+            padding: 50px;
+        }
+.left-section {
+            width: 40%;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .block {
+            margin-bottom: 20px;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+	
+        .right-section {
+            width: 60%;
+            padding: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 10;
+        }
+		/* Estilos generales del footer */
+        footer {
+            background-color: #0012AB; /* Fondo oscuro */
+            color: #fff; /* Texto blanco */
+            padding: 40px 40px; /* Espaciado del footer */
+            display: block; /* Cambia a bloque para diseño vertical */
+            font-size: 15px; /* Tamaño de fuente */
+            font-weight: normal; /* Negrita */
+        }
+		
+		        /* Estilo para los enlaces dentro de la clase específica */
+        .col-md-6.col-xl-3 a {
+            color: white; /* Cambia el color del texto a blanco */
+            text-decoration: none; /* Quita el subrayado de los enlaces */
+        }
+        
+        /* Si quieres que el color cambie al pasar el ratón por encima */
+        .col-md-6.col-xl-3 a:hover {
+            color: #ccc; /* Cambia a un gris claro cuando se pasa el ratón */
+        }
+        
+    </style>
+	
+	  <!-- Enlace a la biblioteca de iconos Font Awesome (si se desea usar para iconos de redes sociales) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+</head>
+		
+<body style="padding-top: 60px">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light col-xl-12"> <a class="navbar-brand" href="#"><img src="../../Downloads/s13 dream/logo.png" width="89" height="36" alt=""/></a> 
+     <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+	    <ul class="navbar-nav ms-auto">	
+	      <li class="nav-item"> <a class="nav-link" href="#">Paquetes</a> </li>
+	      <li class="nav-item"> <a class="nav-link" href="#">Terminales</a> </li>
+	      <li class="nav-item"> <a class="nav-link" href="#">Ayuda</a> </li>	    
+   	      <li class="nav-item"> <a class="nav-link" href="#">Contacto</a> </li>
+        </ul>
+</div>
+</nav>
+</body>
+
+	<body>	
+		<p><h1>Puntos de abordaje</h1></p>	
+		<p><h5>¡Planea tu viaje! Conoce los puntos de salida de autobuses a Puebla o CDMX.. una terminal cerca de ti</h5></p>
+
+<div class="contenedor-padre">
+    <div class="left-section">
+        <div class="block">
+            <h2>Capu</h2>
+            <p>Boulevard Norte No. 4222, Col. Las Cuartillas, C.P. 72050, Puebla</p>
+			<p>2222738300</p>
+        </div>
+		
+	
+        <div class="block">
+            <h2>Autobuses Puebla</h2>
+            <p>Av 6 Pte 1106, San Miguelito, 72090 Heroica Puebla de Zaragoza</p>
+			<p>22223545578</p>
+        </div>
+		
+		
+        <div class="block">
+            <h2>Terminal de Autobuses</h2>
+            <p>Calle 33 Nte 7, Amor, 72140 Heroica Puebla de Zaragoza.</p>
+			<p>25222365985</p>
+        </div>
+    </div>
+
+    <div class="right-section">
+        <h2>Ubicación en Google Maps</h2>
+        <!-- Inserta aquí el iframe de Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1885.7158752319126!2d-98.20069267520988!3d19.04474572568912!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc0ddbf9c3aad%3A0x20ef2061d5aa3c56!2sAv.%20Reforma%20334A%2C%20Centro%20hist%C3%B3rico%20de%20Puebla%2C%2072000%20Heroica%20Puebla%20de%20Zaragoza%2C%20Pue.%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2sus!4v1727127100017!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+</body>
+	
+<footer>
+<div class= "container">
+<div class= "row"> <!--fila-->
+	
+<!--el mapa del sitio-->
+<div class= "col-md-6 col-xl-3">
+     <h3> Mapa del sitio </h3>
+     <dl>
+          <dt><a href= "">Inicio</a></dt>
+          <dt><a href= "">Paquetes </a></dt>
+          <dt><a href= "">Ayuda</a></dt>
+          <dt><a href= "">Viajes</a></dt>
+     </dl>
+</div>
+
+<!--datos de contacto-->
+	<div class= "col-md-6 col-xl-3">
+     <h3>Pago seguro</h3>
+      	</div>
+	
+	<!--datos de ayuda-->
+<div class= "col-md-6 col-xl-3">
+     <h3>Ayuda</h3>
+	  <dt><a href= "">FAQ</a></dt>
+          <dt><a href= ""> </a></dt>
+    </div>
+			
+	<!--datos de contacto-->
+<div class= "col-md-6 col-xl-3">
+     <h3>Contacto</h3>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+	
+</div></div>
+</footer>
+
+</html>

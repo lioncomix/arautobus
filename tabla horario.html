@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios de Viaje</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(images/fondo-sin-texto.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #06b9d9 ;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+		
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Destino</th>
+                <th>Hora de Salida</th>
+                <th>Hora de Llegada</th>
+                <th>Duración</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CDMX</td>
+                <td>08:00 AM</td>
+                <td>10:30 AM</td>
+                <td>2h 30min</td>
+            </tr>
+            <tr>
+                <td>Guadalajara</td>
+                <td>09:00 AM</td>
+                <td>11:45 AM</td>
+                <td>2h 45min</td>
+            </tr>
+            <tr>
+                <td>Tlaxcala</td>
+                <td>10:00 AM</td>
+                <td>12:30 PM</td>
+                <td>2h 30min</td>
+            </tr>
+            <tr>
+                <td>Puebla</td>
+                <td>11:00 AM</td>
+                <td>01:15 PM</td>
+                <td>2h 15min</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+	
+</body>
+</html>
+

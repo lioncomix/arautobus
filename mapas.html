@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Bloques e Insertar Google Maps</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .left-section {
+            width: 70%;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .block {
+            margin-bottom: 20px;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .right-section {
+            width: 70%;
+            padding: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="left-section">
+        <div class="block">
+            <h2>Bloque 1</h2>
+            <p>Información del primer bloque.</p>
+			<p>Información del tercer bloque.</p>
+        </div>
+        <div class="block">
+            <h2>Bloque 2</h2>
+            <p>Información del segundo bloque.</p>
+			<p>Información del tercer bloque.</p>
+        </div>
+        <div class="block">
+            <h2>Bloque 3</h2>
+            <p>Información del tercer bloque.</p>
+			<p>Información del tercer bloque.</p>
+        </div>
+    </div>
+
+    <div class="right-section">
+        <h2>Ubicación en Google Maps</h2>
+        <!-- Inserta aquí el iframe de Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1885.7158752319126!2d-98.20069267520988!3d19.04474572568912!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc0ddbf9c3aad%3A0x20ef2061d5aa3c56!2sAv.%20Reforma%20334A%2C%20Centro%20hist%C3%B3rico%20de%20Puebla%2C%2072000%20Heroica%20Puebla%20de%20Zaragoza%2C%20Pue.%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2sus!4v1727127100017!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+</body>
+</html>
+

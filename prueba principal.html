@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>pagina principal</title>
+	
+<style>
+        /* Contenedor padre */
+        .contenedor-flex {
+            display: flex; /* Usamos flexbox */
+            justify-content: space-between; /* Espaciado entre elementos */
+            align-items: flex-start; /* Alineación superior */
+            gap: 10px; /* Espacio entre los elementos */
+            padding: 50px;
+        }
+
+        .fondo-formulario {
+            background-image: url("../../Downloads/pleca.png"); /* Reemplaza con la ruta de tu imagen */
+            background-size: 900px; /* Ajusta la imagen para cubrir todo el contenedor */
+            background-position: top left; /* Posiciona la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            padding: 50px; /* Espacio interno */
+            min-height: 70vh; /* Altura mínima */
+            width: 50%; /* Ancho del contenedor */
+        }
+
+        .formulario-contenedor {
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+            padding: 20px; /* Espacio interno del formulario */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra para el formulario */
+            max-width: 60%; /* Ancho máximo del formulario */
+        }
+
+        .contenedor {
+            background-color: #f8f8f8; /* Color de fondo */
+            padding: 20px; /* Espacio interno */
+            border: 2px solid #ddd; /* Borde del contenedor */
+            border-radius: 8px; /* Bordes redondeados */
+            text-align: center; /* Centrar texto */
+            width: 40%; /* Ancho del contenedor */
+        }
+
+        .titulo {
+            font-size: 24px; /* Tamaño de fuente del título */
+            font-weight: bold; /* Negrita */
+            margin-bottom: 10px; /* Espacio inferior */
+            color: #333; /* Color del texto */
+        }
+
+        .subtitulo {
+            font-size: 18px; /* Tamaño de fuente del subtítulo */
+            margin-bottom: 20px; /* Espacio inferior */
+            color: #666; /* Color del texto */
+        }
+
+        .boton {
+            padding: 10px 20px; /* Espaciado del botón */
+            background-color: #3498db; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cursor en forma de mano */
+            text-decoration: none; /* Sin subrayado */
+            font-size: 16px; /* Tamaño de fuente del botón */
+        }
+
+        .boton:hover {
+            background-color: #2980b9; /* Color de fondo del botón al pasar el mouse */
+        }
+		
+   /* Contenedor de la barra gris */
+        .barra-gris {
+            background-color: #f0f0f0; /* Color de fondo gris */
+            padding: 10px; /* Espaciado alrededor de la imagen */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra de la barra gris */
+            width: 100%; /* Ancho completo de la página */
+            margin: 10px auto; /* Centra la barra y añade espacio superior e inferior */
+            border-radius: 0px; /* Bordes redondeados */
+		    position: relative; /* Establecer posición relativa */
+			top: -60px; /* Mueve la barra hacia arriba 20px */
+
+        }
+
+        /* Contenedor de la imagen y texto */
+        .imagen-con-texto {
+            position: relative; /* Posición relativa para el texto absoluto */
+            width: 100%; /* Ancho completo del contenedor */
+            max-width: 400px; /* Ancho máximo */
+            margin: 0 auto 20px; /* Centra el contenedor */
+        }
+
+        /* Imagen de fondo */
+        .imagen-con-texto img {
+            width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+            display: block; /* Evita el espacio inferior que generan las imágenes */
+            border-radius: 5px; /* Bordes redondeados */
+			position: relative; /* Establecer posición relativa */
+
+        }
+
+        /* Estilo del texto sobre la imagen */
+        .texto-sobre-imagen {
+            position: absolute; /* Posiciona el texto sobre la imagen */
+		    width: 300px; /* Ancho fijo en píxeles */
+            top: 50%; /* Centra verticalmente el texto */
+            left: -50%; /* Centra horizontalmente el texto */
+            transform: translate(-60%, -40%); /* Ajuste de centrado */
+            color: #0012AB; /* Color del texto */
+            font-size: 20px; /* Tamaño de fuente */
+            font-weight: bold; /* Negrita */
+            text-align: center; /* Centra el texto */
+			
+        }
+		
+	  .texto-sobre-imagen2 {
+            position: absolute; /* Posiciona el texto sobre la imagen */
+            width: 300px; /* Ancho fijo en píxeles */
+            top: 50%; /* Centra verticalmente el texto */
+            left:150%; /* Centra horizontalmente el texto */
+            transform: translate(-50%, -40%); /* Ajuste de centrado */
+            color: #0012AB; /* Color del texto */
+            font-size: 20px; /* Tamaño de fuente */
+            font-weight: bold; /* Negrita */
+            text-align: center; /* Centra el texto */
+        }
+
+		/* Estilos generales del footer */
+        footer {
+            background-color: #0012AB; /* Fondo oscuro */
+            color: #fff; /* Texto blanco */
+            padding: 40px 40px; /* Espaciado del footer */
+            display: block; /* Cambia a bloque para diseño vertical */
+            font-size: 15px; /* Tamaño de fuente */
+            font-weight: normal; /* Negrita */
+        }
+		
+		        /* Estilo para los enlaces dentro de la clase específica */
+        .col-md-6.col-xl-3 a {
+            color: white; /* Cambia el color del texto a blanco */
+            text-decoration: none; /* Quita el subrayado de los enlaces */
+        }
+        
+        /* Si quieres que el color cambie al pasar el ratón por encima */
+        .col-md-6.col-xl-3 a:hover {
+            color: #ccc; /* Cambia a un gris claro cuando se pasa el ratón */
+        }
+
+    </style>
+	<style>
+		body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container2 {
+    width: 50%;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px #000;
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+		
+
+	</style>
+	  <!-- Enlace a la biblioteca de iconos Font Awesome (si se desea usar para iconos de redes sociales) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+</head>
+		
+<body style="padding-top: 70px">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light col-xl-12"> <a class="navbar-brand" href="#"><img src="../../Downloads/s13 dream/logo.png" width="89" height="36" alt=""/></a>
+	  
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> 
+	</button>
+		
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+	    <ul class="navbar-nav ms-auto">
+			
+	      <li class="nav-item"> <a class="nav-link" href="#">Paquetes</a> </li>
+	      <li class="nav-item"> <a class="nav-link" href="pagina con mapa.html">Terminales</a> </li>
+	      <li class="nav-item"> <a class="nav-link" href="#">Ayuda</a> </li>	    
+   	      <li class="nav-item"> <a class="nav-link" href="#">Contacto</a> </li>
+	  </ul>
+</div>
+	
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent2">
+  <ul class="navbar-nav ms-auto">
+	  
+	  
+
+    <!-- Opciones de Inicio de Sesión y Registro -->
+    <li class="nav-item"> 
+      <a class="nav-link" href="#" style="color: #007bff; font-weight: bold; padding: 8px 16px; margin: 0 5px;">Iniciar Sesión</a> 
+    </li>
+	  
+    <li class="nav-item"> 
+      <a class="nav-link" href="#" style="background-color: #007bff; color: white; font-weight: bold; padding: 8px 16px; border-radius: 4px; margin: 0 5px;">Registrarse</a> 
+    </li>
+  </ul>
+</div>
+
+	
+	
+</nav>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+<div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: grey">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active"> <img class="d-block mx-auto" src="../../Downloads/Recurso 1.png" alt="First slide">
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="carousel-item"> <img class="d-block mx-auto" src="../../Downloads/Recurso 2.png" alt="Second slide">
+      <div class="carousel-caption">
+        <h5>Second slide Heading</h5>
+        <p>Second slide Caption</p>
+      </div>
+    </div>
+    <div class="carousel-item"> <img class="d-block mx-auto" src="../../Downloads/Recurso 3.png" alt="Third slide">
+      <div class="carousel-caption">
+        <h5>Third slide Heading</h5>
+        <p>Third slide Caption</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+</body>
+  
+<body>
+    <!-- Contenedor Flexbox -->
+    <div class="contenedor-flex">
+        <!-- Formulario con imagen de fondo -->
+        <div class="fondo-formulario">
+            <div class="container formulario-contenedor">
+                <h2 class="mb-4">BUSCA TUS BOLETOS</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="destino" class="form-label">Destino</label>
+                        <select class="form-select" id="destino">
+                            <option selected>Selecciona un destino</option>
+                            <option value="paris">CDMX</option>
+                            <option value="londres">Guadalajara</option>
+                            <option value="tokio">Puebla</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fecha-ida" class="form-label">Fecha de Ida</label>
+                        <input type="date" class="form-control" id="fecha-ida">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fecha-vuelta" class="form-label">Fecha de Vuelta</label>
+                        <input type="date" class="form-control" id="fecha-vuelta">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pasajeros" class="form-label">Número de Pasajeros</label>
+                        <input type="number" class="form-control" id="pasajeros" min="1" placeholder="Introduce el número de pasajeros">
+                    </div>
+
+					     <div class="mb-3">
+                        <label for="Tipo pasajero" class="form-label">Tipo de pasajero</label>
+                        <select class="form-select" id="edad">
+                            <option selected>Selecciona edad</option>
+                            <option value="paris">Niño</option>
+                            <option value="londres">Adulto</option>
+                            <option value="tokio">Tercera edad</option>
+                        </select>
+                    </div>
+					
+					
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+				 <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+      
+			
+			<div class="container2">
+       <h1>Completa tu Pago</h1>
+        <form id="formularioPago" action="procesar_pago.php" method="POST"> <!-- Cambia 'procesar_pago.php' por la URL de tu pasarela de pago o script -->
+           
+			<label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="tarjeta">Número de Tarjeta de Crédito/Débito:</label>
+            <input type="text" id="tarjeta" name="tarjeta" required>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+
+            <label for="expiracion">Fecha de Expiración (MM/AA):</label>
+            <input type="text" id="expiracion" name="expiracion" required>
+
+            <input type="submit" value="Pagar Ahora">
+        </form>
+    </div>
+        </div>
+    </div>
+        <!-- Contenedor de información adicional -->
+        <div class="contenedor">
+            <div class="titulo">¡Somos tu alternativa perfecta si hablamos de Autobuses México Puebla!</div>
+            <div class="subtitulo">Especialistas en renta de autobuses, paquetes de diversión, y traslados a los mejores espectáculos.</div>
+            <a href="otra-pagina.html" class="boton">Más info</a>
+        </div>
+    </div>
+</body>
+
+<body>
+	<div class="barra-gris">
+    <div class="imagen-con-texto">
+		
+		
+        <!-- Imagen de fondo -->
+        <img src="images/Recurso 6.png" alt="Descripción de la Imagen">
+        <!-- Texto sobre la imagen -->
+        <div class="texto-sobre-imagen">Más de 10 años de experiencia 
+			<p>En la transportaciónde pasajeros en México, cuenta con una flotilla de autobuses y con diversas opciones especializados para el turismo. </p></div>
+		<div class="texto-sobre-imagen2">¡No busques más!
+			<p>Hemos recorrido aproximadamente 10 mil  kilómetros, ofreciendo confort, comodidad y seguridad en cada uno de nuestros viajes.</p> </div>
+    </div>
+</div>
+</body>
+	
+
+<footer>
+<div class= "container">
+<div class= "row"> <!--fila-->
+	
+<!--el mapa del sitio-->
+<div class= "col-md-6 col-xl-3">
+     <h3> Mapa del sitio </h3>
+     <dl>
+          <dt><a href= "">Inicio</a></dt>
+          <dt><a href= "https://www.estrellaroja.com.mx/destinos">Paquetes </a></dt>
+          <dt><a href= "">Ayuda</a></dt>
+          <dt><a href= "">Viajes</a></dt>
+     </dl>
+</div>
+
+<!--datos de contacto-->
+	<div class= "col-md-6 col-xl-3">
+     <h3>Pago seguro</h3>
+      	</div>
+	
+	<!--datos de ayuda-->
+<div class= "col-md-6 col-xl-3">
+     <h3>Ayuda</h3>
+	  <dt><a href= "">FAQ</a></dt>
+          <dt><a href= ""> </a></dt>
+    </div>
+			
+	<!--datos de contacto-->
+<div class= "col-md-6 col-xl-3">
+     <h3>Contacto</h3>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+	
+</div></div>
+</footer>
+	
+<script src="script formulario.js"></script>
+	<script src="pantalla carga.js"></script>
+	<script src="https://account.snatchbot.me/script.js"></script><script>window.sntchChat.Init(398754)</script> 
+	
+</html>

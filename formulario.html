@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario</title>
+<style type="text/css">
+body {
+    background-image: url(images/fondo-sin-texto.jpg);
+    background-repeat: no-repeat;
+}
+</style>
+</head>
+
+<body><center>
+<h1>Selecciona tu horario de viaje</h1>
+	
+<form action="/submit-form" method="POST">
+   
+	<!-- Campo de texto -->
+    <label for="nombre">Nombres:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <!-- Campo de Apellidos --><br><br>
+    <label for="apellidos">Apellidos:</label>
+    <input type="apellidos" id="apellidos" name="apellidos">
+
+    <!-- Campo de Teléfono --><br><br>
+    <label for="telefono">Teléfono:</label>
+    <input type="telefono" id="telefono" name="telefono"><br><br>
+	
+	    <!-- Botón de opción -->
+    <label>Género:</label>
+    <input type="radio" id="hombre" name="genero" value="hombre">
+    <label for="hombre">Hombre</label>
+    <input type="radio" id="mujer" name="genero" value="mujer">
+    <label for="mujer">Mujer</label><br>
+	
+	<h3>Horarios</h3>
+  <input type="month">   <input type="time"><br><br>
+	
+		 <!-- Menú desplegable -->
+    <label for="estado">Origen:</label>
+    <select id="estado" name="estado">
+        <option value="puebla">Puebla</option>
+        <option value="cdmx">CDMX</option>
+        <option value="guadalajara">Guadalajara</option>
+    </select>
+	
+	<!-- Menú desplegable -->
+    <label for="estado">Destino:</label>
+    <select id="estado" name="estado">
+      <option value="puebla">Puebla</option>
+        <option value="cdmx">CDMX</option>
+        <option value="guadalajara">Guadalajara</option>
+    </select>
+
+    <!-- Casilla de verificación --><br><br>
+    <label for="suscripcion">He leído y aceptado las condiciones:</label>
+    <input type="checkbox" id="suscripcion" name="suscripcion"><br><br>
+
+    <!-- Área de texto -->
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje"></textarea>
+
+    <right><!-- Botón de envío --><br><br>
+    <input type="submit" value="Enviar"></right>
+</form>
+	
+		
+
+	
+</body>
+</html>
